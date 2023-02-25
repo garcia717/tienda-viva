@@ -4,13 +4,14 @@ import Navbar from "./Components/Navbar/Navbar";
 
 function App() {
   return ( 
-    
-  <div className = "App" >
+  <div>
     <Navbar />
-    <ItemListContainer />
+        <ItemListContainer greeting={"Bienvenido a Tienda Viva"}/>
     <Footer />
-    </div>
+
+    
+    
+  </div>
   );
 }
-
 export default App;
