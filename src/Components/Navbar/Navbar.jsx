@@ -1,9 +1,10 @@
 import CartWidget from "../CartWidget/CartWidget";
 import styles from "./Navbar.module.css";
 
-const Navbar = () => {
+const Navbar = ({children}) => {
   return (
-    <div className={styles.containerNavbar}>
+    <div>
+          <div className={styles.containerNavbar}>
       <img
         style={{ width: "4%" }}
         src="https://res.cloudinary.com/dkpm1gaqm/image/upload/v1676985571/avatarv_zp8h53.jpg"
@@ -48,6 +49,8 @@ const Navbar = () => {
         </li>
       </ul>
       <CartWidget />
+      </div>
+      {children}
     </div>
   );
 };
