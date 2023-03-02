@@ -18,18 +18,21 @@ const ItemListContainer = ({greeting}) => {
       productList
         .then((res) => {
           setItems(res);
+          setTimeout( 2000)
         })
+
         .catch((error) => {
           console.log(error);
         });
     }, []);
   
-    console.log(items);
+    
   
 return <div>
     <h1>{greeting}</h1>
     <ItemList items={items}/>
     </div>;
+
 };
 
 export default ItemListContainer;
