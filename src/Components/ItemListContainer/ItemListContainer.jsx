@@ -17,8 +17,7 @@ const ItemListContainer = ({greeting}) => {
   
       productList
         .then((res) => {
-          setItems(res);
-          setTimeout( 2000)
+         setTimeout(2000, setItems(res)) ;
         })
 
         .catch((error) => {

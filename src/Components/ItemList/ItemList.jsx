@@ -4,7 +4,7 @@ import Item from '../Item/Item';
 
 const ItemList = ({items}) => {
     return (
-        <div >
+        <div style={{width:'100%', minHeight: '100vh' , justifyContent:'space-evenly',  display:'flex' ,  gap: '1rem', backgroundColor: 'green'}}>
         {
             items.map((element)=>{
                 return(
