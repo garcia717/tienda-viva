@@ -1,39 +1,25 @@
-import React from "react";
-
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import {  CardActionArea } from "@mui/material";
-import Stack from "@mui/material/Stack";
-import Button from "@mui/material/Button";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import { Link } from "react-router-dom";
 
 
 const Item = ({ element }) => {
   return (
+    <div >
 
-      <Card sx={{ width: 300, height:400 }}>
-        <CardActionArea>
-          <CardMedia component="img" height="140" image={element.img} alt="" />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              {element.title}
-            </Typography>
-            <Typography gutterBottom variant="h5" component="div">
-              Precio: $ {element.price}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {element.description}
-            </Typography>
-          </CardContent>
-          <Stack direction="row" spacing={2}>
-            <Button variant="contained" color="success" size="small">
-              Ver más
-            </Button>
-          </Stack>
-        </CardActionArea>
-      </Card>
- 
+    <Card style={{ width: '18rem'}}>
+      <Card.Img  variant="top" src="https://res.cloudinary.com/dkpm1gaqm/image/upload/v1677433549/Tienda%20Viva/qjhtvcky3jrojs3sx8po.jpg" />
+      <Card.Body >
+        <Card.Title >{element.title}</Card.Title>
+        <Card.Title>Precio: ${element.price}</Card.Title>
+        <Card.Text>
+          {element.description}
+        </Card.Text>
+        <Link to={`/itemDetail/${element.id}`}><Button variant="success">Ver más</Button></Link>
+      </Card.Body>
+    </Card>
+
+    </div>
   );
 };
 

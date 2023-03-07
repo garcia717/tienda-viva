@@ -1,3 +1,9 @@
 .containerModule{
     background-color: rgb(176, 24, 24);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
 }

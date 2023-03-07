@@ -19,7 +19,7 @@ export const products = [{
     },
     {
         id: 3,
-        title: "Cepillos de diente de bambú",
+        title: "Cepillos de dientes, de bambú",
         price: 50,
         stock: 10,
         description: "Cepillo de dientes Bio-degradable",
@@ -36,4 +36,46 @@ export const products = [{
         category: "Higiene Personal",
         img: "https://res.cloudinary.com/dkpm1gaqm/image/upload/v1677433549/Tienda%20Viva/qjhtvcky3jrojs3sx8po.jpg"
     },
+
+    {
+        id: 5,
+        title: "Lavavasos en fibra natural",
+        price: 5,
+        stock: 10,
+        description: "Lavavasos en fibra biodegradable hecho por artesanos locales",
+        category: "Articulos del hogar",
+        img: "https://res.cloudinary.com/dkpm1gaqm/image/upload/v1677433549/Tienda%20Viva/qjhtvcky3jrojs3sx8po.jpg"
+    },
+
+    {
+        id: 6,
+        title: "Toallas de cocina reutilizables",
+        price: 70,
+        stock: 10,
+        description: "Set de 5 toallas de cocina",
+        category: "Articulos del hogar",
+        img: "https://res.cloudinary.com/dkpm1gaqm/image/upload/v1677433549/Tienda%20Viva/qjhtvcky3jrojs3sx8po.jpg"
+    },
+
+    {
+        id: 7,
+        title: "Set de utensilios",
+        price: 150,
+        stock: 10,
+        description: "Set de utensilios de bambu hechos por artesanos locales",
+        category: "Articulos del hogar",
+        img: "https://res.cloudinary.com/dkpm1gaqm/image/upload/v1677433549/Tienda%20Viva/qjhtvcky3jrojs3sx8po.jpg"
+    },
+
+    {
+        id: 8,
+        title: "Bandejas",
+        price: 125,
+        stock: 10,
+        description: "Set de bandejas de bambu hechas por artesanos locales",
+        category: "Articulos del hogar",
+        img: "https://res.cloudinary.com/dkpm1gaqm/image/upload/v1677433549/Tienda%20Viva/qjhtvcky3jrojs3sx8po.jpg"
+    },
+
+
 ]
