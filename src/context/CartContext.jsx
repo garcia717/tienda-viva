@@ -12,7 +12,7 @@ const CartContextProvider = ({ children }) => {
         if (element.id === product.id) {
           return {
             ...element,
-            quantity: element.quantity + product.quantity,
+            quantity:   product.quantity,
           };
         } else {
           return element;
@@ -48,13 +48,26 @@ const CartContextProvider = ({ children }) => {
     return totalPrice;
   };
 
+  const deleteProductById = ( id )=>{
+    const newCart = cart.filter( (element)=> element.id !== id ) 
+    setCart(newCart)
+  }
+
+  const getQuantityById = (id)=>{
+
+    const productSelected = cart.find( (element)=> element.id === id)
+    return productSelected?.quantity
+
+  }
+
   let data = {
     cart,
     addToCart,
-    setCart,
     clearCart,
     getTotalQuantity,
-    getTotalPrice
+    getTotalPrice,
+    deleteProductById,
+    getQuantityById
   };
 
 

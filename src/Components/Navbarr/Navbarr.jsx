@@ -20,7 +20,7 @@ const Navbarr = ({ children }) => {
                 style={{ maxHeight: "100px"}}
                 navbarScroll
               >
-                <Link to="/"><Nav.Link href="#action1" style={{color:'whitesmoke', fontWeight:'bold'}}>Home</Nav.Link></Link>
+                <Link to="/"><Nav.Link href="#action1" style={{color:'whitesmoke', fontWeight:'bold', textDecorationLine:"none"}}>Home</Nav.Link></Link>
                 <Link to="/category/Articulos del hogar"><Nav.Link href="#action2" style={{color:'whitesmoke' , fontWeight:'bold'}}>Articulos del hogar</Nav.Link></Link>
                 <Link to="/category/Higiene Personal"><Nav.Link href="#action3" style={{color:'whitesmoke', fontWeight:'bold'}}>Higiene Personal</Nav.Link></Link>
               </Nav>

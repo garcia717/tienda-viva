@@ -1,0 +1,11 @@
+.cartView{
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;
+    box-shadow: 0px 5px 5px 0px grey;
+    border-radius: 10px;
+    margin: 8px;
+    width: 95%;
+    
+
+}

@@ -18,10 +18,10 @@ const ItemCount = ({ stock, initial=1, onAdd }) => {
 
   return (
     <div>
-      <h2>{contador}</h2>
-      <Button variant="primary" onClick={sumar} style={{margin:'10px'}}>Agregar</Button>
-      <Button variant="danger" onClick={restar} style={{margin:'10px'}}>Restar</Button>
+      <h2>Unidades:  {contador}</h2>
+      <Button variant="primary" onClick={sumar} style={{margin:'10px'}}>+</Button>
       <Button variant="success" onClick={ ()=> onAdd(contador) } style={{margin:'10px'}}>Agregar al carrito</Button>
+      <Button variant="danger" onClick={restar} style={{margin:'10px'}}>-</Button>
     </div>
   );
 };
