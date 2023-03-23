@@ -1,7 +1,8 @@
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import {useParams} from "react-router-dom"
 import {CartContext} from '../../context/CartContext';
-import {products} from '../../productsMock'
+import { db } from '../../firebaseConfig';
+import {getDoc, collection, doc} from "firebase/firestore"
 import ItemCount from '../ItemCount/ItemCount';
 import Swal from 'sweetalert2';
 
@@ -10,7 +11,19 @@ const ItemDetailContainer = () => {
     
     const {addToCart, getQuantityById} = useContext(CartContext)
 
-    const productSelected = products.find((element)=> element.id === Number(id));
+    const [productSelected, setProductSelected] = useState({})
+    useEffect(()=>{
+      const itemsCollection = collection(db, "products")
+      const ref = doc(itemsCollection, id)
+      getDoc(ref)
+      .then(res => {
+        setProductSelected({
+            ...res.data(),
+            id: res.id
+          
+        })
+      })
+    }, [id])
 
     const onAdd = (cantidad)=>{
       let product = {...productSelected, quantity: cantidad    
