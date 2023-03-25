@@ -73,7 +73,7 @@ const Cart = () => {
       <div style={{width:"95%"}}>
         <h1>Valor total en el carrito: ${totalPrice}</h1>
         {
-          cart.length > 0 && <div style={{margin:"6px"}}><Button variant="success">Comprar</Button> <Button variant="danger" onClick={clear}>Vaciar Carrito</Button></div> 
+          cart.length > 0 && <div style={{margin:"6px"}}><Button variant="success">Continuar</Button> <Button variant="danger" onClick={clear}>Vaciar Carrito</Button></div> 
         }
         
       </div>

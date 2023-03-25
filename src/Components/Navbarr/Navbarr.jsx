@@ -29,9 +29,9 @@ const Navbarr = ({ children }) => {
       <div>
         <Navbar expand="lg">
           <Container fluid>
-            <Link to="/">
               {" "}
-              <Navbar.Brand href="#">
+            <Link to="/">
+              <Navbar.Brand>
                 <img
                   src="https://res.cloudinary.com/dkpm1gaqm/image/upload/v1676985645/avatarv_dcmdnn.jpg"
                   width={60}
@@ -48,20 +48,15 @@ const Navbarr = ({ children }) => {
               >
                 {categoryList.map((category) => {
                   return (
-                    <Nav.Link
-                        style={{
-                        color: "whitesmoke",
-                        fontWeight: "bold",
-                        textDecorationLine: "none",
-                      }}
-                    >
+                    <Nav.Link key={category.id}>
                       <Link
+                      key={category.id}
                         style={{
                           color: "whitesmoke",
                           fontWeight: "bold",
                           textDecorationLine: "none",
                         }}
-                        key={category.id}
+                        
                         to={category.path}
                       >
                         {category.title}

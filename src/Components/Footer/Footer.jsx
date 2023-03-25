@@ -1,4 +1,4 @@
-import Nav from 'react-bootstrap/Nav'
+
 
 const Footer = ({ children }) => {
   return (
