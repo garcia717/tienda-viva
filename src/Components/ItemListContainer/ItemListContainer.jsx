@@ -34,17 +34,22 @@ const ItemListContainer = () => {
   }, [categoryId]);
 
   return (
+  <div>
+    {
+      
+    }
     <div style={{ padding: "5px" }}>
       {items.length > 0 ? (
         <ItemList items={items} />
-      ) : (
-        <BeatLoader
+        ) : (
+          <BeatLoader
           color="#2f6364"
           margin={60}
           style={{ display: "flex", justifyContent: "center" }}
-        />
-      )}
+          />
+          )}
     </div>
+  </div>
   );
 };
 

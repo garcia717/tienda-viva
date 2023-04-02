@@ -1,0 +1,19 @@
+.containerForm{
+    display: flex;
+    flex-direction: column;
+    border: 4px solid #2f6364;
+    margin: 1rem;
+    min-height: 1vh ;
+    border-radius: 8px;
+}
+.containerInput{
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 1cap;
+
+}
+.btn{
+    width: 25%;
+    margin: 5px;
+    align-self: center;
+}

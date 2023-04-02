@@ -2,7 +2,7 @@ import React from "react";
 import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail = ({  productSelected,  onAdd, quantity}) => {
-  console.log(quantity)
+
   return (
     <div>
       <div>
