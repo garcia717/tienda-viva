@@ -12,6 +12,9 @@ const FormCheckout = ({ cart, getTotalPrice, setOrderId, clearCart }) => {
     email: "",
     phone: "",
   });
+  const [reEmail, setReEmail] =useState({
+    email:"",
+  })
   const handleSubmit = (e) => {
     e.preventDefault();
     
@@ -38,8 +41,8 @@ const FormCheckout = ({ cart, getTotalPrice, setOrderId, clearCart }) => {
   };
 
     const mailCheck = (value)=>{
-      let email1= document.e1.email1.value
-      let email2= document.e2.email2.value
+      let email1= reEmail
+      let email2= userData.email
       if(email1 !== email2){
         Swal.fire({
           icon: 'error',
@@ -76,6 +79,7 @@ const FormCheckout = ({ cart, getTotalPrice, setOrderId, clearCart }) => {
           type="email"
           placeholder="E-mail"
           className={styles.containerInput}
+          onChange={(e) => setReEmail({...reEmail, email: e.target.value})}
         ></input>
         <input
           id="e2"
