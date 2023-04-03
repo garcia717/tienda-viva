@@ -17,7 +17,7 @@ const FormCheckout = ({ cart, getTotalPrice, setOrderId, clearCart }) => {
   })
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+    mailCheck();
     let total = getTotalPrice();
 
     let order = {
@@ -44,7 +44,7 @@ const FormCheckout = ({ cart, getTotalPrice, setOrderId, clearCart }) => {
       let email1= reEmail
       let email2= userData.email
       if(email1 !== email2){
-        Swal.fire({
+        return Swal.fire({
           icon: 'error',
           title: 'Oops...',
           text: 'Los e-mail deben coincidir',
