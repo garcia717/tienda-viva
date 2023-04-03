@@ -18,6 +18,8 @@ git clone https://github.com/garcia717/tienda-viva.git
 
 ### La app se desplego en Vercel.com se puede revisar en el siguiente enlace [Tienda Viva App](https://tienda-viva.vercel.app/)
 
+### Archivo .gif demostrativo va incluido en ../src/Gif
+
 
 
 
