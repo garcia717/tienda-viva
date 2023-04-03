@@ -18,14 +18,14 @@ const FormCheckout = ({ cart, getTotalPrice, setOrderId, clearCart }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     let email1 = userData.email
-    let email2 = reEmail
+    let email2 = reEmail.email
     if(email1 !== email2){
       return Swal.fire({
         icon: 'error',
         title: 'Oops...',
         text: 'Los e-mail deben coincidir',
       })
-    }
+    }else{
   
     let total = getTotalPrice();
      
@@ -43,11 +43,11 @@ const FormCheckout = ({ cart, getTotalPrice, setOrderId, clearCart }) => {
       })
       .catch((err) => console.log(err));
 
-    cart.map((product) => {
+    cart.forEach((product) => {
       let refDoc = doc(db, "products", product.id);
       updateDoc(refDoc, { stock: product.stock - product.quantity });
     });
-  };
+  }};
 
 
 
